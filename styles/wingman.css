@@ -1,0 +1,146 @@
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto;
+    gap: 20px;
+    padding-bottom: 5%;
+}
+
+.banner{
+    background: url("/images/wingman_banner.jpg");
+    background-repeat: no-repeat;
+    background-size: 90%;
+    background-position: center;
+    background-attachment: fixed;
+    grid-column: 1/4;
+    grid-row: 1/2;
+    height: 65vh;
+}
+
+.controls{
+    grid-column: 2/4;
+    grid-row: 2/3;
+    text-align: center;
+    margin: auto;
+}
+
+.cost{ 
+    grid-column: 3/4;
+    grid-row: 3/4;
+    text-align: center;
+    margin: auto;
+}
+
+.effect{
+    grid-column: 2/3 ;
+    grid-row: 3/4;
+    text-align: center;
+    margin: auto;
+}
+
+.img1{
+    grid-column: 1/2;
+    grid-row: 2/3;
+    width: 30vw;
+    margin: auto;
+}
+
+.img2{
+    grid-column: 1/2;
+    grid-row: 3/5;
+    width: 15vw;
+    margin: auto;
+    transition: transform .2s;
+}
+
+.img2:hover{
+    transform: scale(1.2);
+}
+
+.img3{
+    grid-column: 2/4;
+    grid-row: 4/5;
+    width: 60vw;
+    margin: auto;
+}
+
+b{ 
+    font-family: "Anton", sans-serif;
+    font-size: 2em;
+}
+
+.fadeIn {
+    animation: fadeIn 1s;
+    opacity: 1;
+}
+.fadeOut {
+    animation: fadeOut 1s;
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(75px);
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        transform: translateX(75px);
+    }
+} 
+
+@media screen and (max-width: 450px) {
+    
+    .banner{
+        height: 38vh;
+        background-size: 100%;
+        background-position-y: 120px;
+    }
+    
+    main{
+        grid-template-rows: auto auto auto auto auto auto auto;
+    }
+    
+    .img1{
+        grid-column: 1/4;
+        grid-row: 2/3;
+        width: 90vw;
+    }
+    
+    .img2{
+        grid-column: 1/4;
+        grid-row: 4/5;
+        width: 60vw;
+    }
+    
+    .img3{
+        grid-column: 1/4;
+        grid-row: 7/8;
+        width: 90vw;
+    }
+
+    .controls{
+        grid-column: 1/4;
+        grid-row: 3/4;
+    }
+    
+    .cost{ 
+        grid-column: 1/4;
+        grid-row: 6/7;  
+    }
+    
+    .effect{
+        grid-column: 1/4;
+        grid-row: 5/6;
+    }
+    
+    }

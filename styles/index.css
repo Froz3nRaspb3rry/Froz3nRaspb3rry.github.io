@@ -1,0 +1,135 @@
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 2px;
+    padding-bottom: 5%;
+}
+
+.banner {
+    background: url("/images/banner.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-attachment: fixed;
+    grid-column: 1/3;
+    grid-row: 1/2;
+    height: 55vh;
+    filter: blur(3px);
+    z-index: -1;
+}
+
+.title {
+    margin: auto;
+    font-size: 11em;
+    grid-column: 1/3;
+    grid-row: 1/2;
+    color: white;
+}
+
+.info {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    margin: auto;
+    text-align: center;
+    font-size: 2em;
+}
+
+.merch {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    margin: auto;
+    transition: transform .2s;
+}
+
+.text {
+    opacity: 100%;
+    ;
+}
+
+.merch:hover {
+    transform: scale(1.5);
+}
+
+img {
+    width: 20vw;
+}
+
+.music {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-column: 2/3;
+    grid-row: 2/4;
+    background: rgb(38, 40, 51);
+    gap: 20px;
+    color: white;
+}
+
+.greater {
+    grid-row: 2/3;
+    margin: auto;
+    text-align: center;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.video {
+    grid-row: 3/4;
+    margin: auto;
+    width: 560px;
+    height: 315px;
+}
+
+h2 {
+    font-family: "Anton", sans-serif;
+    font-size: 3em;
+    text-align: center;
+    grid-row: 1/2;
+    margin: auto;
+}
+
+@media screen and (max-width: 450px) {
+
+    .banner {
+        height: 40vh;
+        background-size: 120%;
+        background-position-y: 130px;
+    }
+
+    main {
+        grid-template-rows: auto auto auto auto;
+    }
+
+    .title {
+        font-size: 5em;
+        grid-column: 1/3;
+        grid-row: 1/2;
+        text-align: center;
+        padding-top: 11vh;
+    }
+
+    .info {
+        grid-column: 1/3;
+        grid-row: 2/3;
+    }
+
+    .merch {
+        grid-column: 1/3;
+        grid-row: 3/4;
+    }
+
+    .img1 {
+        width: 60vw;
+    }
+
+    .music {
+        grid-column: 1/3;
+        grid-row: 4/5;
+    }
+
+    .video {
+        width: 288px;
+        height: 162px;
+    }
+
+}

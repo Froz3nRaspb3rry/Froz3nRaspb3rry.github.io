@@ -1,0 +1,106 @@
+body {
+    font-family: "Work Sans", sans-serif;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+}
+
+main {
+    margin-left: 5%;
+    margin-right: 5%;
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(228, 227, 227);
+    font-family: "Anton", sans-serif;
+    font-size: 2em;
+    padding-left: 3%;
+}
+
+.home:hover {
+    color: rgb(124, 56, 231);
+}
+
+.mosh:hover {
+    color: rgb(101, 178, 44);
+}
+
+.wingman:hover {
+    color: rgb(236, 220, 45);
+}
+
+.dizzy:hover {
+    color: rgb(55, 151, 241);
+}
+
+.thrash:hover {
+    color: rgb(227, 106, 230);
+}
+
+a:visited {
+    color: rgb(168, 168, 168);
+}
+
+header {
+    padding: 2%;
+    background: rgb(38, 40, 51);
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+footer {
+    padding: 2%;
+    text-align: center;
+    background: rgb(38, 40, 51);
+    color: rgb(228, 227, 227);
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+
+.legal {
+    font-size: 1em;
+    padding-left: 0%;
+    font-family: "Work Sans", sans-serif;
+    color: rgb(228, 227, 227);
+}
+
+.legal:hover {
+    color: salmon;
+}
+
+.logo {
+    width: 200px;
+    float: left;
+}
+
+nav {
+    text-align: right;
+    padding-bottom: 1%;
+    padding-top: 1%;
+}
+
+h1 {
+    font-family: "Anton", sans-serif;
+    font-size: 2em;
+}
+
+p {
+    font-size: 1.5em;
+}
+
+.text {
+    opacity: 0;
+}
+
+@media screen and (max-width: 450px) {
+
+    header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+
+}
